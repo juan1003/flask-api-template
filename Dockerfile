@@ -8,4 +8,8 @@ RUN pip install -r requirements.txt
 
 COPY . ./
 
-CMD ["flask", "--app app", "run --debug"]
+ENV FLASK_APP=app.py
+
+EXPOSE 5000
+
+CMD ["flask", "run"]
